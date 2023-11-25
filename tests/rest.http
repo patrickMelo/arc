@@ -1,0 +1,23 @@
+GET http://localhost:8080/db/size
+PUT http://localhost:8080/values
+
+first 1
+
+PUT http://localhost:8080/values
+
+first 1 5
+
+GET http://localhost:8080/values/first
+PATCH http://localhost:8080/values/first
+DELETE http://localhost:8080/values/first
+
+PUT http://localhost:8080/sets
+
+names 1 bonham 3 robert 2 jimmy 5 paul 4 patrick
+
+GET http://localhost:8080/sets/names/size
+GET http://localhost:8080/sets/names/rank/jimmy
+GET http://localhost:8080/sets/names
+GET http://localhost:8080/sets/names?start=2
+GET http://localhost:8080/sets/names?stop=2
+GET http://localhost:8080/sets/names?stop=-2&start=1

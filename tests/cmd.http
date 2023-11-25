@@ -1,0 +1,26 @@
+GET http://localhost:8080/?cmd=DBSIZE
+
+GET http://localhost:8080/?cmd=SET%20first%201
+GET http://localhost:8080/?cmd=SET%20second%202
+GET http://localhost:8080/?cmd=SET%20third%203%20EX%2010
+
+GET http://localhost:8080/?cmd=GET%20third
+
+GET http://localhost:8080/?cmd=DEL%20second
+GET http://localhost:8080/?cmd=DEL%20first%20second
+
+GET http://localhost:8080/?cmd=GET%20second
+
+GET http://localhost:8080/?cmd=SET%20counter%200
+GET http://localhost:8080/?cmd=GET%20counter
+GET http://localhost:8080/?cmd=INCR%20counter
+
+GET http://localhost:8080/?cmd=ZADD%20names%201%20robert
+GET http://localhost:8080/?cmd=ZADD%20names%203%20jimmy
+GET http://localhost:8080/?cmd=ZADD%20names%205%20paul
+GET http://localhost:8080/?cmd=ZADD%20names%204%20bonham
+GET http://localhost:8080/?cmd=ZADD%20names%202%20patrick
+
+GET http://localhost:8080/?cmd=ZCARD%20names
+GET http://localhost:8080/?cmd=ZRANK%20names%20jimmy
+GET http://localhost:8080/?cmd=ZRANGE%20names%200%20-2
